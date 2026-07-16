@@ -20,7 +20,9 @@ add_includedirs("include", { public = true })
 add_packages("rtsyn-port")
 add_includedirs("src")
 
-local rtsyn_modules = {}
+local rtsyn_modules = {
+	{ path = "plugin", name = "plugin" },
+}
 
 for _, rtsyn_module in ipairs(rtsyn_modules) do
 	local tests_name = "tests/" .. rtsyn_module.path .. "-tests"
